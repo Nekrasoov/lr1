@@ -20,7 +20,7 @@ public class Request {
     @NotBlank (message = "UID не может быть пустым")
     @Size (max = 32, message = "Символов не должно быть больше 32")
     private String operationUid;
-    private SystemName  systemName;
+    private String systemName;
     @NotBlank (message = "UID не может быть пустым")
     private String systemTime;
     private String source;
