@@ -20,7 +20,7 @@ public class Request {
     @NotBlank (message = "UID не может быть пустым")
     @Size (max = 32, message = "Символов не должно быть больше 32")
     private String operationUid;
-    private String systemName;
+    private SystemName  systemName;
     @NotBlank (message = "UID не может быть пустым")
     private String systemTime;
     private String source;
@@ -32,4 +32,19 @@ public class Request {
     private int templateId;
     private int productCode;
     private int smsCode;
+
+    @Override
+    public String toString(){
+        return "{" +
+                "uid='" + uid + '\'' +
+                ", operationUid='" + operationUid + '\'' +
+                ", systemName='" + systemName + '\'' +
+                ", systemTime='" + systemTime + '\'' +
+                ", source='" + source + '\'' +
+                ", communicationId=" + communicationId +
+                ", templateId=" + templateId +
+                ", productCode=" + productCode +
+                ", smsCode=" + smsCode +
+                "}";
+    }
 }
